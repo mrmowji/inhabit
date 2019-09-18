@@ -1,2 +1,2 @@
-# Your Tracker
+# In-Habit
 An activity/habit tracker
