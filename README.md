@@ -1,2 +1,4 @@
 # InHabit
-An activity/habit tracker
+An offile activity/habit tracker.
+
+It stores your data on the browser.
