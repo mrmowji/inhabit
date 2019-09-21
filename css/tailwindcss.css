@@ -1,0 +1,254 @@
+﻿@tailwind base;
+
+@tailwind components;
+
+/* add extracted components here */
+a {
+  @apply text-blue-500;
+}
+
+  a:hover {
+    @apply text-blue-600;
+  }
+
+blockquote {
+  @apply border-r-8 border-gray-500 p-3 mb-3;
+}
+
+button {
+  @apply outline-none;
+}
+
+h1 {
+  @apply text-3xl font-bold mb-2;
+}
+
+h2 {
+  @apply text-xl font-bold mb-2 mt-5;
+}
+
+h3 {
+  @apply text-lg font-bold mb-2;
+}
+
+input {
+  @apply outline-none bg-gray-200 border-gray-200 p-2 block border-4 rounded;
+}
+
+  input:focus {
+    @apply border-blue-300;
+  }
+
+label {
+  @apply text-gray-500;
+}
+
+p {
+  @apply mb-3;
+}
+
+  p:last-child {
+    @apply mb-0;
+  }
+
+time {
+  @apply text-gray-500 ml-5;
+}
+
+ul {
+  @apply list-disc list-inside mb-3;
+}
+
+.field {
+  @apply mb-5;
+}
+
+.field-validation-error {
+  @apply text-red-500 my-1 block font-bold;
+}
+
+.input-with-error {
+  @apply border-red-300 bg-red-300;
+}
+
+.input-with-error:focus {
+  @apply border-red-400;
+}
+
+.input-with-warning {
+  @apply border-orange-300 bg-orange-300;
+}
+
+.input-with-warning:focus {
+  @apply border-orange-400;
+}
+
+.input-with-info {
+  @apply bg-yellow-200 border-yellow-200;
+}
+
+.input-with-info:focus {
+  @apply border-yellow-300;
+}
+
+.tab-header {
+  @apply text-gray-500;
+}
+
+.selected-tab-header {
+  @apply text-blue-900 bg-gray-200;
+}
+
+.modal {
+  @apply z-10 flex fixed inset-0 items-center justify-center;
+  background: rgba(0,0,0,0.3);
+}
+
+.modal-visible {
+  @apply flex;
+}
+
+.modal-wrapper {
+  @apply bg-white shadow-lg rounded-lg;
+  max-width: 90%;
+  width: 350px;
+}
+
+.modal-header {
+  @apply py-5 px-8 border-gray-200 border-b-2 font-bold text-lg flex justify-between items-center;
+}
+
+.modal-content {
+  @apply py-5 px-8 text-sm;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+[v-cloak] {
+  @apply hidden;
+}
+
+@screen md {
+  .tab-header {
+    @apply text-blue-900;
+  }
+  
+  .selected-tab-header {
+    @apply text-blue-900 bg-white;
+  }
+}
+
+@tailwind utilities;
+
+@font-face {
+  font-family: Samim;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/samim-bold.eot');
+  src: url('../fonts/samim-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/samim-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/samim-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/samim-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Samim;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/samim-bold.eot');
+  src: url('../fonts/samim-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/samim-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/samim-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/samim-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Samim;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/samim-bold.eot');
+  src: url('../fonts/samim-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/samim-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/samim-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/samim-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Samim;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/samim.eot');
+  src: url('../fonts/samim.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/samim.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/samim.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/samim.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/vazir-bold.eot');
+  src: url('../fonts/vazir-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/vazir-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/vazir-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/vazir-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/vazir-bold.eot');
+  src: url('../fonts/vazir-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/vazir-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/vazir-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/vazir-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/vazir-bold.eot');
+  src: url('../fonts/vazir-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/vazir-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/vazir-bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/vazir-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/vazir.eot');
+  src: url('../fonts/vazir.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/vazir.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/vazir.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/vazir.ttf') format('truetype');
+}
+
+:not(.icon) {
+  font-family: Vazir, Tahoma, sans-serif !important;
+  letter-spacing: -0.5px;
+}
+
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+  width: 0px;
+  position: absolute;
+  left: 0;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: #c5c5c5;
+	border: 2px solid #c5c5c5;
+}

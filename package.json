@@ -1,0 +1,27 @@
+{
+  "name": "inhabit",
+  "version": "1.0.0",
+  "description": "Your habits tracker",
+  "scripts": {
+    "tailwindcss": "npx tailwind build css/tailwindcss.css -o css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmowji/inhabit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrmowji/inhabit/issues"
+  },
+  "homepage": "https://github.com/mrmowji/inhabit#readme",
+  "dependencies": {
+    "lodash": "^4.17.13",
+    "persian-date": "^1.0.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "npx": "^10.2.0",
+    "tailwindcss": "^1.0.4"
+  }
+}
