@@ -63,6 +63,18 @@ ul {
   @apply list-disc list-inside mb-3;
 }
 
+.dates {
+  @apply absolute right-0 top-0 w-32 bg-gray-200 text-gray-500 z-10;
+}
+
+.date {
+  @apply px-3 py-2;
+}
+
+.date-selected {
+  @apply bg-blue-500 text-white;
+}
+
 .field {
   @apply mb-5;
 }
@@ -93,6 +105,18 @@ ul {
 
 .input-with-info:focus {
   @apply border-yellow-300;
+}
+
+.habits-data {
+  @apply absolute top-0 mr-32;
+}
+
+.habits-titles {
+  @apply absolute right-0 top-0 bg-gray-600 text-white;
+}
+
+.habit-title {
+  @apply inline-block px-3 py-2 w-24 text-center;
 }
 
 .tab-header {

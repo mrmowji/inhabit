@@ -7,7 +7,7 @@ let MESSAGE_TYPES = {
   SUCCESS: "success",
 };
 
-persianDate.toLocale('fa');
+persianDate.toLocale('en');
 
 Vue.component('day', {
   props: ['habit'],
@@ -26,6 +26,16 @@ let app = new Vue({
   mounted: function() {
     this.today = new persianDate();
     this.loadMonthData(this.today);
+    document.getElementById("app").addEventListener("scroll", function(e) {
+      let datesElement = e.target.querySelector(".dates");
+      if (datesElement !== null) {
+        datesElement.style.right = e.target.scrollWidth - e.target.scrollLeft - e.target.offsetWidth + "px";
+      }
+      let habitsTitlesElement = e.target.querySelector(".habits-titles");
+      if (habitsTitlesElement !== null) {
+        habitsTitlesElement.style.top = e.target.scrollTop + "px";
+      }
+    });
   },
   computed: {
     
@@ -37,8 +47,12 @@ let app = new Vue({
       let firstDayOfMonth = date.startOf("month");
       let numberOfDaysInMonth = date.daysInMonth();
       for (let i = 0; i < numberOfDaysInMonth; i++) {
-        let date = firstDayOfMonth.add("days", i).format("YYYY/MM/DD");
-        this.daysInMonth.push(this.days[date] != undefined ? this.deepClone(this.days[date]) : { date: date });
+        let newDate = firstDayOfMonth.add("days", i);
+        let date = newDate.format("YYYY/MM/DD");
+        let dateInPersian = newDate.toLocale("fa").format("YYYY/MM/DD");
+        let day = this.days[date] != undefined ? this.deepClone(this.days[date]) : { date: date };
+        day.dateInPersian = dateInPersian;
+        this.daysInMonth.push(day);
       }
       this.isLoading = false;
       /*for (let key of Object.keys(this.daysInMonth)) {

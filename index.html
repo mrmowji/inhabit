@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-  <div id="app" class="w-full h-full relative">
-    <div class="absolute right-0 top-0 bottom-0 w-24">
-      <div v-for="(day, dayIndex) in daysInMonth">
-        {{ day.date }}
+  <div id="app" class="w-full h-full relative overflow-x-auto overflow-y-auto">
+    <div class="dates">
+      <div v-for="(day, dayIndex) in daysInMonth" class="date" :class="{ 'date-selected': day.date == today.format('YYYY/MM/DD') }">
+        {{ day.dateInPersian }}
       </div>
     </div>
-    <div class="mr-24 h-full relative" style="overflow-x: auto; word-wrap: none; white-space: nowrap">
-      <div class="absolute right-0 top-0">
-        <div v-for="(habit, habitIndex) in habits" class="inline-block">
+    <div class="habits-data">
+      <div class="habits-titles" style="word-wrap: none; white-space: nowrap">
+        <div v-for="(habit, habitIndex) in habits" class="habit-title">
           {{ habit }}
         </div>
       </div>
