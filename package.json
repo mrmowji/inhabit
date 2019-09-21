@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "npx": "^10.2.0",
-    "tailwindcss": "^1.0.4"
+    "tailwindcss": "^1.1.2"
   }
 }

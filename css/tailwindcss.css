@@ -15,6 +15,10 @@ blockquote {
   @apply border-r-8 border-gray-500 p-3 mb-3;
 }
 
+html, body {
+  @apply w-full h-full;
+}
+
 button {
   @apply outline-none;
 }

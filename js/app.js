@@ -7,7 +7,7 @@ let MESSAGE_TYPES = {
   SUCCESS: "success",
 };
 
-persianDate.toLocale('en');
+persianDate.toLocale('fa');
 
 Vue.component('day', {
   props: ['habit'],
@@ -18,7 +18,8 @@ let app = new Vue({
   el: "#app",
   data: {
     days: {},
-    daysInMonth: {},
+    daysInMonth: [],
+    habits: [],
     today: null,
     isLoading: true,
   },
@@ -32,12 +33,12 @@ let app = new Vue({
   methods: {
     loadMonthData: function(date) {
       this.isLoading = true;
-      this.daysInMonth = {};
+      this.daysInMonth = [];
       let firstDayOfMonth = date.startOf("month");
       let numberOfDaysInMonth = date.daysInMonth();
       for (let i = 0; i < numberOfDaysInMonth; i++) {
         let date = firstDayOfMonth.add("days", i).format("YYYY/MM/DD");
-        this.daysInMonth[date] = this.days[date] != undefined ? this.deepClone(this.days[date]) : { date: date };
+        this.daysInMonth.push(this.days[date] != undefined ? this.deepClone(this.days[date]) : { date: date });
       }
       this.isLoading = false;
       /*for (let key of Object.keys(this.daysInMonth)) {

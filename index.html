@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,19 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-  <div id="app">
-
+  <div id="app" class="w-full h-full relative">
+    <div class="absolute right-0 top-0 bottom-0 w-24">
+      <div v-for="(day, dayIndex) in daysInMonth">
+        {{ day.date }}
+      </div>
+    </div>
+    <div class="mr-24 h-full relative" style="overflow-x: auto; word-wrap: none; white-space: nowrap">
+      <div class="absolute right-0 top-0">
+        <div v-for="(habit, habitIndex) in habits" class="inline-block">
+          {{ habit }}
+        </div>
+      </div>
+    </div>
   </div>
   
   <script src="js/persian-date.min.js"></script>
