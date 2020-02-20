@@ -682,12 +682,15 @@ input {
   border-color: #edf2f7;
   padding: 0.5rem;
   display: block;
-  border-width: 4px;
-  border-radius: 0.25rem;
+  border-bottom-width: 2px;
+  font-size: 0.875rem;
+  width: 100%;
+  text-align: center;
 }
 
 input:focus {
   border-color: #90cdf4;
+  background-color: #fff;
 }
 
 label {
@@ -700,6 +703,18 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+select {
+  outline: 0;
+  background-color: #edf2f7;
+  border-color: #edf2f7;
+  padding: 0.5rem;
+  display: block;
+  border-width: 4px;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  width: 100%;
 }
 
 time {
@@ -718,9 +733,10 @@ ul {
   right: 0;
   top: 0;
   width: 8rem;
-  background-color: #edf2f7;
+  background-color: #e2e8f0;
   color: #a0aec0;
   z-index: 10;
+  font-size: 0.875rem;
 }
 
 .date {
@@ -728,11 +744,24 @@ ul {
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  border-bottom-width: 2px;
+  border-color: #e2e8f0;
 }
 
 .date-selected {
   background-color: #4299e1;
   color: #fff;
+}
+
+.day {
+  white-space: nowrap;
+  background-color: #edf2f7;
+  display: flex;
+  justify-content: center;
+}
+
+.day-current {
+  background-color: #fff;
 }
 
 .field {
@@ -786,6 +815,8 @@ ul {
   top: 0;
   background-color: #718096;
   color: #fff;
+  font-size: 0.875rem;
+  z-index: 10;
 }
 
 .habit-title {
@@ -796,6 +827,8 @@ ul {
   padding-bottom: 0.5rem;
   width: 6rem;
   text-align: center;
+  border-bottom-width: 2px;
+  border-color: #718096;
 }
 
 .tab-header {
@@ -835,8 +868,8 @@ ul {
 .modal-header {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   border-color: #edf2f7;
   border-bottom-width: 2px;
   font-weight: 700;
@@ -846,14 +879,47 @@ ul {
   align-items: center;
 }
 
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .modal-content {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   font-size: 0.875rem;
   max-height: 350px;
   overflow-y: auto;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg);
+  }
+
+  100% { -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);
+  }
+
+  100% { transform: rotate(360deg);
+  }
 }
 
 [v-cloak] {
